@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
+const MONGO_URI = process.env.MONGO_URI;
 
-// mongoose.connect(
-//   "mongodb+srv://profMartin:Talentos2025@clustertest.jilgbna.mongodb.net/talentos2025"
-// );
+mongoose.connect(MONGO_URI);
 
-mongoose.connect("mongodb://localhost:27017/talentos2025");
+// mongoose.connect("mongodb://localhost:27017/talentos2025");
 
 const db = mongoose.connection;
 
